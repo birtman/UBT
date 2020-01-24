@@ -36,6 +36,7 @@ html {
 body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
+  background-color: blue;
 }
 
 html,
@@ -79,7 +80,7 @@ body {
 
 nav a {
   color: #fff;
-  background: linear-gradient(to right, blue 10%, black 50%, blue 60%);
+  background: linear-gradient(to right, black 10%, blue 50%, white 60%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -101,7 +102,8 @@ nav a {
 /*IMAGE ACCORDION*/
 
 .header {
-  width: 1140px;
+  width: 100%;
+  height: 100vh !important;
   margin: 0 auto;
 }
 
@@ -109,7 +111,7 @@ nav a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 }
 
 .item {
@@ -126,26 +128,25 @@ nav a {
 }
 
 .item-1 {
-  background-image: url("https://www.weltderphysik.de/typo3temp/assets/_processed_/d/6/csm_20170614_Krake_TheSP4N1SHThinkstock_2aca4963c2.jpg");
+  background-image: url("/img/_DSC1526\ Kopie.jpg");
 }
 
 .item-2 {
-  background-image: url("/img/_DSC0791\Kopie.jpg");
+  background-image: url("/img/_DSC2574heller.jpg");
 }
 
 .item-3 {
-  background-image: url("/img/_DSC0791\Kopie.jpg");
+  background-image: url("/img/klein_DSC2472.jpg");
 }
 
 /*DESCRIPTION*/
 
 .description {
-  position: absolute;
-  top: 30%;
   margin: auto;
   padding: 2em;
 }
 .description h1 {
+  margin-top: 7vh;
   color: black;
 }
 .description p {
@@ -158,4 +159,203 @@ nav a {
   border: 1px solid black;
   background: black;
   color: #fff;
+}
+
+/*ABOUT*/
+.about {
+  margin: 4em 0;
+  padding: 1em;
+  position: relative;
+  background-color: black;
+}
+.about h1 {
+  margin: 2em;
+  max-width: 40%;
+}
+
+.about p {
+  font-size: 3rem;
+}
+
+.about img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+.about img:hover {
+  filter: grayscale(0%);
+  mix-blend-mode: multiply;
+}
+
+.about .desc {
+  padding: 2em;
+  border-left: 4px solid blue;
+}
+.about .desc h3 {
+  color: blue;
+}
+.about .desc p {
+  line-height: 1.7;
+  color: blue;
+}
+
+/*Portfolio*/
+
+.portfolio {
+  background-color: blue;
+  margin: 4em 0;
+  position: relative;
+}
+.portfolio h1 {
+  color: white;
+  margin: 2em;
+}
+
+.portfolio h2 {
+  color: white;
+  font-size: 1rem;
+  padding-top: 15px;
+}
+
+.portfolio img {
+  height: 15rem;
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+.portfolio img:hover {
+  background: linear-gradient(to right, black 10%, blue 50%, white 60%);
+  animation: textclip 3s linear infinite;
+}
+
+.portfolio p {
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .portfolio p {
+    color: white;
+    font-size: 2rem;
+    padding-top: 50px;
+  }
+}
+.portfolio .container {
+  margin-top: 50px;
+}
+
+.project {
+  padding-bottom: 40px;
+}
+
+/*HOVER EFFECT PROJECT*/
+
+.portfolio .img-effect figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, white 0%, blue 75%);
+  content: "";
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+}
+
+.img-effect figcaption::before {
+  transition: opacity 0.35s, transform 0.35s;
+  mix-blend-mode: initial;
+}
+
+.img-effect:hover figcaption::before {
+  opacity: 0.5;
+  transform: translate3d(0, 0, 0);
+}
+
+/*CURRENT PROJECT*/
+
+.blog {
+  padding-top: 2em;
+  position: relative;
+  align-items: stretch;
+  background-color: white;
+  padding-bottom: 5vh;
+}
+
+.blog .container {
+  align-items: stretch;
+}
+
+.blog .card {
+  border-radius: 0px !important;
+  border: none !important;
+}
+
+.blog h1 {
+  color: black;
+  text-align: left !important;
+  margin-top: 2em;
+}
+
+.blog .card img {
+  width: 100%;
+  height: 12em;
+}
+.blog .card-title {
+  color: black;
+}
+.blog .card-body {
+  padding: 1em;
+  background-color: blue;
+}
+
+.blog p {
+  color: black;
+}
+
+.card-link {
+  color: white !important;
+  position: relative !important;
+}
+
+.card-link a:hover {
+  color: blue !important;
+  position: absolute !important;
+  left: 4px !important;
+}
+
+.card-footer {
+  background-color: blue !important;
+}
+
+/*CONTACT*/
+
+.contact-form {
+  margin: 6em 0;
+  position: relative;
+}
+
+.contact-form h1 {
+  color: white;
+}
+.contact-form .right {
+  max-width: 600px;
+}
+.contact-form .right .btn-secondary {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
+  border: 0;
+}
+
+.contact-form .right .form-control::placeholder {
+  color: blue;
+  font-size: 16px;
 }
